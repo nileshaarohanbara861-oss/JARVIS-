@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-hud: 'Chakra Petch', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-tech: 'Share Tech Mono', monospace;
+    --font-body: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+}
+
+.font-hud {
+  font-family: var(--font-hud);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Sci-fi Hologram and Glow Effects */
+.hud-glow {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.65), 0 0 20px rgba(6, 182, 212, 0.35);
+}
+
+.hud-glow-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.7), 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.15), inset 0 0 15px rgba(6, 182, 212, 0.08);
+}
+
+.box-glow-cyan-active {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.4), inset 0 0 25px rgba(6, 182, 212, 0.2);
+}
+
+/* Background Cyber Grid */
+.bg-cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+}
+
+/* Subtle Hologram Scanline overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.01),
+    rgba(0, 255, 0, 0.005),
+    rgba(0, 0, 255, 0.01)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for HUD panels */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 25, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.6);
+}
